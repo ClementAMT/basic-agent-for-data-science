@@ -7,7 +7,7 @@ from tools import summarize_dataframe, missing_values_report, detect_types, corr
 # ---------------------------------------
 # Load API key
 # ---------------------------------------
-os.environ["GOOGLE_API_KEY"] = "AIzaSyC87ABzG-LoDunXm8gIu4Bz4DxrF9rXLuI"
+os.environ["GOOGLE_API_KEY"] = "<YOUR_GEMINI_KEY_HERE>"
 
 # ---------------------------------------
 # LLM
@@ -66,4 +66,5 @@ def run_summarizer_agent(inputs: dict, agent=summarizer_agent):
             msgs = update["model"]["messages"]
             if msgs:
                 final_answer = msgs[-1].content 
+
     return final_answer
